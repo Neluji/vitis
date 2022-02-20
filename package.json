@@ -19,10 +19,40 @@
     "prepare": "husky install"
   },
   "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es2021": true
+    },
     "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "react-app",
+        "react-app/jest"
+    ],
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "react/react-in-jsx-scope": 0,
+        "react/jsx-uses-react": 0
+    }
+  },
+  "prettier": {
+    "singleQuote": true,
+    "jsxSingleQuote": true,
+    "semi": false
   },
   "browserslist": {
     "production": [
@@ -38,14 +68,11 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.2",
-    "eslint": "^8.9.0",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-react": "^7.28.0",
     "husky": "^7.0.4",
     "lint-staged": "^12.3.4",
     "postcss": "^8.4.6",
     "prettier": "^2.5.1",
-    "prop-types": "^15.8.1",
     "tailwindcss": "^3.0.23"
   },
   "lint-staged": {

@@ -4,7 +4,11 @@ import styles from './NavBar.styles'
 
 function NavBtn({ id, children }) {
   return (
-    <button id={id + '-btn'} className={styles.button}>
+    <button
+      id={id + '-btn'}
+      className={styles.button}
+      data-testid={'test-btn-' + id}
+    >
       <span className='relative'>
         <span className={styles.hoverEffectRotation}>
           <span className={styles.hoverEffectScale}></span>

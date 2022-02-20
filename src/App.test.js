@@ -1,8 +1,8 @@
-import { render } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import App from 'App'
 
 test('profile button visible', () => {
   render(<App />)
-  const linkElement = document.querySelector('#profile-btn')
-  expect(linkElement).toBeVisible()
+  const profileBtn = screen.queryByTestId('test-btn-profile')
+  expect(profileBtn).toBeVisible()
 })
