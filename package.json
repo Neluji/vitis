@@ -15,7 +15,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:noWatch": "npm run test -- --watchAll=false",
     "eject": "react-scripts eject",
+    "lint": "eslint --cache --fix",
+    "format": "prettier --write",
     "prepare": "husky install"
   },
   "eslintConfig": {
@@ -76,7 +79,9 @@
     "tailwindcss": "^3.0.23"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx}": "eslint --cache --fix",
-    "src/**/*.{js,jsx,ts,tsx,css,scss,md}": "prettier --write"
+    "src/**/*.{js,jsx,ts,tsx,css,scss,md}": [
+      "npm run lint",
+      "npm run format"
+    ]
   }
 }
