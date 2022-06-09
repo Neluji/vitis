@@ -28,29 +28,29 @@
       "es2021": true
     },
     "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended",
-        "react-app",
-        "react-app/jest"
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "react-app",
+      "react-app/jest"
     ],
     "settings": {
-        "react": {
-            "version": "detect"
-        }
+      "react": {
+        "version": "detect"
+      }
     },
     "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": "latest",
-        "sourceType": "module"
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "ecmaVersion": "latest",
+      "sourceType": "module"
     },
     "plugins": [
-        "react"
+      "react"
     ],
     "rules": {
-        "react/react-in-jsx-scope": 0,
-        "react/jsx-uses-react": 0
+      "react/react-in-jsx-scope": 0,
+      "react/jsx-uses-react": 0
     }
   },
   "prettier": {
@@ -77,6 +77,7 @@
     "lint-staged": "^12.3.4",
     "postcss": "^8.4.6",
     "prettier": "^2.5.1",
+    "react-icons": "^4.4.0",
     "tailwindcss": "^3.0.23"
   },
   "lint-staged": {

@@ -1,6 +1,7 @@
 import { Component } from 'react'
 import PropTypes from 'prop-types'
 import styles from './NavBar.styles'
+import { AiFillHome } from 'react-icons/ai'
 
 function NavBtn({ id, children }) {
   return (
@@ -36,7 +37,9 @@ class NavBar extends Component {
     return (
       <div className={styles.navbar}>
         <div className='topBtns w-min'>
-          <NavBtn id='home'>H</NavBtn>
+          <NavBtn id='home'>
+            <AiFillHome />
+          </NavBtn>
           {groups}
         </div>
         <div className='bottomBtns w-min '>
